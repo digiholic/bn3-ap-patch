@@ -66,6 +66,10 @@ writeJobs:
 	mov r1,19h				;r1 = # of jobs
 	strb r1,[r0]			;write r1 in the r0 addr
 	
+	ldr r0,=2000300h        ;r0 = addr of Tora's Job completion bytes
+	mov r1,0F0h              ;r1 = four trues in a row to mark them completed
+	strb r1,[r0]            ;write r1 in the r0 addr
+	
 	bx lr					;return
 	
 writeNaviCust:
@@ -266,6 +270,16 @@ customRoutine:
 	bl writeFolders
 	;bl writeFullLibrary
 	
+	;Reset items collected
+	ldr r1, = 0xE0057FC
+
+	;do it in byte writes because bus width is 8
+	mov r2, 0h
+	strb r2, [r1]
+	strb r2, [r1, #1]
+	strb r2, [r1, #2]
+	strb r2, [r1, #3]
+	
 	pop r0-r7,r15
 	
 .pool
@@ -308,12 +322,12 @@ emails:
 jobs:	
 	.db 0x04,0x05,0x06,0x07,0x08,0x09,0x0A,0x0B,0x0C,0x00,0x01,0x02,0x03,0x0D,0x0E,0x0F
 	.db 0x10,0x11,0x12,0x13,0x14,0x15,0x16,0x17,0x18,0x40
-	.db 0xFF,0xFF,0xFF,0x80
+	.db 0x0F,0xFF,0xFF,0x80
 	
 .pool
 
 navicust:
-	.word 0x2001AD0,0x02001AD4,0x02001AD9,0x02001B38
+	.word 0x02001AD4,0x02001AD9,0x02001B38;0x2001AD0
 	
 keyitems:
 	.word 0x20019C3,0x20019CA,0x20019D2,0x20019D5;0x20019CE,0x20019D0,0x20019D7,0x20019DB,0x20019DC,0x20019DD,0x20019DE,0x20019DF,0x20019E0,0x20019E1,0x20019E2,0x20019E3,0x20019E4,0x20019E5,0x2001A1C,0x2001A1D,0x2001A1E,0x2001A1F
@@ -452,30 +466,23 @@ StartDialog EQU 0x080266fc
 		push r14
 		push r0-r2
 		
-		;set r1 to memory address of RAM item index
-		ldr r1,=0x203FD02
-		;set r2 to memory address of SRAM save index
-		ldr r2,=0xE0057FC
-		;Load the value at r1 to r0
-		ldrb r0,[r1]
-		;Save r0 to the value at r2
-		strb r0,[r2]
-		
-		ldr r1,=0x203FD03
-		ldr r2,=0xE0057FD
-		ldrb r0,[r1]
-		strb r0,[r2]
-		
-		ldr r1,=0x203FD04
-		ldr r2,=0xE0057FE
-		ldrb r0,[r1]
-		strb r0,[r2]
-		
-		ldr r1,=0x203FD05
-		ldr r2,=0xE0057FF
-		ldrb r0,[r1]
-		strb r0,[r2]
-		
+		;set r0 to memory address of RAM item index
+		;set r1 to memory address of SRAM save index
+		ldr r0, = 0x203FD02
+		ldr r1, = 0xE0057FC
+
+		;do it in byte writes because bus width is 8
+		ldrb r2, [r0]
+		strb r2, [r1]
+
+		ldrb r2, [r0, #1]
+		strb r2, [r1, #1]
+
+		ldrb r2, [r0, #2]
+		strb r2, [r1, #2]
+
+		ldrb r2, [r0, #3]
+		strb r2, [r1, #3]
 		pop r0-r2
 		
 		;re-run the code we replaced and return
@@ -487,25 +494,23 @@ StartDialog EQU 0x080266fc
 		push r14
 		push r0-r2
 		
-		ldr r1,=0x203FD02
-		ldr r2,=0xE0057FC
-		ldrb r0,[r2]
-		strb r0,[r1]
-		
-		ldr r1,=0x203FD03
-		ldr r2,=0xE0057FD
-		ldrb r0,[r2]
-		strb r0,[r1]
-		
-		ldr r1,=0x203FD04
-		ldr r2,=0xE0057FE
-		ldrb r0,[r2]
-		strb r0,[r1]
-		
-		ldr r1,=0x203FD05
-		ldr r2,=0xE0057FF
-		ldrb r0,[r2]
-		strb r0,[r1]
+		;set r0 to memory address of SRAM save index
+		;set r1 to memory address of RAM item index
+		ldr r0, = 0xE0057FC
+		ldr r1, = 0x203FD02
+
+		;do it in byte writes because bus width is 8
+		ldrb r2, [r0]
+		strb r2, [r1]
+
+		ldrb r2, [r0, #1]
+		strb r2, [r1, #1]
+
+		ldrb r2, [r0, #2]
+		strb r2, [r1, #2]
+
+		ldrb r2, [r0, #3]
+		strb r2, [r1, #3]
 		
 		pop r0-r2
 		;re-run the code we replaced and return
