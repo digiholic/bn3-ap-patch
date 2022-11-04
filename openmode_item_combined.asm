@@ -271,14 +271,14 @@ customRoutine:
 	;bl writeFullLibrary
 	
 	;Reset items collected
-	ldr r1, = 0xE0057FC
+	;ldr r1, = 0xE0057FC
 
 	;do it in byte writes because bus width is 8
-	mov r2, 0h
-	strb r2, [r1]
-	strb r2, [r1, #1]
-	strb r2, [r1, #2]
-	strb r2, [r1, #3]
+	;mov r2, 0h
+	;strb r2, [r1]
+	;strb r2, [r1, #1]
+	;strb r2, [r1, #2]
+	;strb r2, [r1, #3]
 	
 	pop r0-r7,r15
 	
@@ -427,7 +427,7 @@ StartDialog EQU 0x080266fc
 		;store our old registers
 		push r4-r7
 		push r0-r3
-		ldr r3,=0x203FD00 ;address where we store the "items queued" bit
+		ldr r3,=0x203fe00 ;address where we store the "items queued" bit
 		; If the value of the memory at address r3 is 1, give new items. Otherwise, skip to return
 		ldr r2,[r3]
 		cmp r2,1h
@@ -448,10 +448,10 @@ StartDialog EQU 0x080266fc
 		
 		;Un-set our check bit
 		mov r0,0x00
-		ldr r3,=0x203FD00
+		ldr r3,=0x203fe00
 		str r0,[r3]
 		
-		ldr r0,=0x203FD10
+		ldr r0,=0x203fe10
 		
 		mov r1,0x00
 		mov r2,0x0
@@ -462,62 +462,6 @@ StartDialog EQU 0x080266fc
 		
 		pop r15
 	
-	saveItemIndex:
-		push r14
-		push r0-r2
-		
-		;set r0 to memory address of RAM item index
-		;set r1 to memory address of SRAM save index
-		ldr r0, = 0x203FD02
-		ldr r1, = 0xE0057FC
-
-		;do it in byte writes because bus width is 8
-		ldrb r2, [r0]
-		strb r2, [r1]
-
-		ldrb r2, [r0, #1]
-		strb r2, [r1, #1]
-
-		ldrb r2, [r0, #2]
-		strb r2, [r1, #2]
-
-		ldrb r2, [r0, #3]
-		strb r2, [r1, #3]
-		pop r0-r2
-		
-		;re-run the code we replaced and return
-		add r5,r0,0
-		add r4,r1,0
-		pop r15
-		
-	loadItemIndex:
-		push r14
-		push r0-r2
-		
-		;set r0 to memory address of SRAM save index
-		;set r1 to memory address of RAM item index
-		ldr r0, = 0xE0057FC
-		ldr r1, = 0x203FD02
-
-		;do it in byte writes because bus width is 8
-		ldrb r2, [r0]
-		strb r2, [r1]
-
-		ldrb r2, [r0, #1]
-		strb r2, [r1, #1]
-
-		ldrb r2, [r0, #2]
-		strb r2, [r1, #2]
-
-		ldrb r2, [r0, #3]
-		strb r2, [r1, #3]
-		
-		pop r0-r2
-		;re-run the code we replaced and return
-		mov r0,12h
-		mov r1,66h
-		pop r15
-	
 	.pool
 .endarea
 
@@ -526,11 +470,6 @@ StartDialog EQU 0x080266fc
 .org 0x080002E8 ;During the frame loop, before the dialog check
 	bl checkForNewItems
 
-.org 0x081327CA
-	bl saveItemIndex
-
-.org 0x08022080
-	bl loadItemIndex
 	
 ;Close file and finish
 .close

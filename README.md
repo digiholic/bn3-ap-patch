@@ -38,7 +38,8 @@ These files are meant to be used with Prof9's [TextPET](https://github.com/Prof9
     - Changes the Chip Order System unlock condition from a story flag check to an item check. Talking to Higsby with the OrderSys in your inventory will give you access to the Chip Order system.
     - Changes the Number Trader entirely. Instead of giving a number entry menu, it now prompts the player to pay 500z for a single item. Paying will give you the next item from the Chip Trader sequence, which can then be randomized. Comes with all new NumberMan dialog to fit this new change
     - Changes the dialog of the hat kid next to the Number Trader will now comment on the state of video gaming in the year 20XX.
-
+- `7AE20C-Post-Alpha.tpl` - Simply adds a flag set to the very first text box after defeating Alpha. Since the flag that is _normally_ set when you beat alpha is already enabled to open postgame content, we needed to make another one. Pointless trivia: This flag is actually the unused 32nd Number Trader item bit!
+    - **Note**: This text archive is in the ROM _uncompressed_. Do not run lz10.py on this one. There is no compressed binary included for this intentionally.
 ### How to use TPL Files
 Install TextPET (linked above). Convert the script into binary using this command:
 ```
