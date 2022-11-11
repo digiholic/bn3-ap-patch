@@ -80,6 +80,7 @@ def patch_rom():
             offset_byte = int32_to_byte_list_le(new_start_offset)
             # Leave a forwarding address where we used to be to point toi the new location
             new_address = bytearray([0xFF, 0xFF])
+            new_address.extend(size.to_bytes(2, 'little'))
             new_address.extend(offset_byte)
             rom_bytes[start: start+6] = new_address
 
