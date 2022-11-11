@@ -50,15 +50,13 @@ def patch_rom():
     with open(rom_file, "rb") as rom:
         rom_bytes = bytearray(rom.read())
 
-    """
     # First, blank out all the provided text banks and store them as open banks
-    for key, bin in bins:
+    for key, bin in bins.items():
         start = int(key, 16)
         size = int(sizes[key], 16)
         end = start + size
         rom_bytes[start:end] = [0xFF] * size
-        open_banks[start] = size
-    """
+
 
     # Then, go through all the provided text banks and store them in the smallest available bank
     for key, bin in bins.items():
@@ -80,6 +78,11 @@ def patch_rom():
             new_start_offset = 0x08000000 + len(rom_bytes)
             print("  New Index "+hex(new_start_offset))
             offset_byte = int32_to_byte_list_le(new_start_offset)
+            # Leave a forwarding address where we used to be to point toi the new location
+            new_address = bytearray([0xFF, 0xFF])
+            new_address.extend(offset_byte)
+            rom_bytes[start: start+6] = new_address
+
             rom_bytes.extend(bin)
             for offset in refs:
                 rom_bytes[offset:offset + 4] = offset_byte
