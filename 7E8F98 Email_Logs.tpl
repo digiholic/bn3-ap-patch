@@ -120,22 +120,8 @@ script 3 mmbn3 {
 	clearMsg
 	checkFlag
 		flag = 4483
-		jumpIfTrue = continue
+		jumpIfTrue = 64
 		jumpIfFalse = 64
-	soundPlay
-		track = 133
-	itemGive
-		item = 81
-		amount = 1
-	"""
-	Lan got:
-	"
-	"""
-	printItem
-		buffer = 0
-		item = 81
-	"\"!!"
-	keyWait
 	waitHold
 }
 script 4 mmbn3 {
@@ -215,63 +201,8 @@ script 4 mmbn3 {
 	clearMsg
 	checkFlag
 		flag = 4484
-		jumpIfTrue = continue
+		jumpIfTrue = 64
 		jumpIfFalse = 64
-	soundPlay
-		track = 133
-	itemGiveNaviCustProgram
-		program = 120
-		color = 1
-		amount = 1
-	itemGiveNaviCustProgram
-		program = 164
-		color = 2
-		amount = 1
-	itemGiveNaviCustProgram
-		program = 168
-		color = 1
-		amount = 1
-	startGiveFolder
-		folder = 10
-	"Lan got:"
-	keyWait
-	clearMsg
-	"""
-	a Navi Customizer,
-	the programs,
-	"""
-	keyWait
-	clearMsg
-	"\""
-	printNaviCustProgram
-		buffer = 0
-		program = 30
-	"""
-	"
-	"
-	"""
-	printNaviCustProgram
-		buffer = 0
-		program = 41
-	"""
-	"
-	"
-	"""
-	printNaviCustProgram
-		buffer = 0
-		program = 42
-	"\""
-	keyWait
-	clearMsg
-	"""
-	and a
-	"
-	"""
-	printFolderName
-		buffer = 0
-		entry = 10
-	"\"!!"
-	keyWait
 	waitHold
 }
 script 5 mmbn3 {
@@ -421,37 +352,8 @@ script 8 mmbn3 {
 	clearMsg
 	checkFlag
 		flag = 4488
-		jumpIfTrue = continue
+		jumpIfTrue = 64
 		jumpIfFalse = 64
-	soundPlay
-		track = 133
-	itemGive
-		item = 80
-		amount = 1
-	itemGiveChip
-		chip = 220
-		code = R
-		amount = 1
-	"Lan got a"
-	keyWait
-	clearMsg
-	"\""
-	printItem
-		buffer = 0
-		item = 80
-	"""
-	" and
-	"
-	"""
-	printChip
-		buffer = 0
-		chip = 220
-	" "
-	printCode
-		buffer = 0
-		code = R
-	"\"!!"
-	keyWait
 	waitHold
 }
 script 9 mmbn3 {
@@ -558,22 +460,8 @@ script 11 mmbn3 {
 	clearMsg
 	checkFlag
 		flag = 4491
-		jumpIfTrue = continue
+		jumpIfTrue = 64
 		jumpIfFalse = 64
-	soundPlay
-		track = 133
-	itemGive
-		item = 95
-		amount = 1
-	"""
-	Lan got:
-	"
-	"""
-	printItem
-		buffer = 0
-		item = 95
-	"\"!!"
-	keyWait
 	waitHold
 }
 script 12 mmbn3 {
@@ -663,22 +551,8 @@ script 13 mmbn3 {
 	clearMsg
 	checkFlag
 		flag = 4493
-		jumpIfTrue = continue
+		jumpIfTrue = 64
 		jumpIfFalse = 64
-	soundPlay
-		track = 133
-	itemGive
-		item = 97
-		amount = 1
-	"""
-	Lan got:
-	"
-	"""
-	printItem
-		buffer = 0
-		item = 97
-	"\""
-	keyWait
 	waitHold
 }
 script 14 mmbn3 {
@@ -1240,24 +1114,8 @@ script 30 mmbn3 {
 	clearMsg
 	checkFlag
 		flag = 4510
-		jumpIfTrue = continue
+		jumpIfTrue = 64
 		jumpIfFalse = 64
-	soundPlay
-		track = 133
-	itemGiveNaviCustProgram
-		program = 88
-		color = 2
-		amount = 1
-	"""
-	Lan got a 
-	NaviCust program:
-	"
-	"""
-	printNaviCustProgram
-		buffer = 0
-		program = 22
-	"\"!!"
-	keyWait
 	waitHold
 }
 script 31 mmbn3 {

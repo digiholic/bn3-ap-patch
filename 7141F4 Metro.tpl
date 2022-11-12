@@ -73,6 +73,18 @@ script 5 mmbn3 {
 	a ticket!
 	"""
 	keyWait
+	"""
+	You need one
+	for every stop
+	along the way.
+	"""
+	keyWait
+	"""
+	Check your e-mail,
+	you could use a
+	shortcut instead!
+	"""
+	keyWait
 	end
 }
 script 6 mmbn3 {
@@ -215,6 +227,18 @@ script 10 mmbn3 {
 	"""
 	You don't have
 	a ticket!
+	"""
+	keyWait
+	"""
+	You need one
+	for every stop
+	along the way.
+	"""
+	keyWait
+	"""
+	Check your e-mail,
+	you could use a
+	shortcut instead!
 	"""
 	keyWait
 	end
@@ -361,6 +385,18 @@ script 15 mmbn3 {
 	a ticket!
 	"""
 	keyWait
+	"""
+	You need one
+	for every stop
+	along the way.
+	"""
+	keyWait
+	"""
+	Check your e-mail,
+	you could use a
+	shortcut instead!
+	"""
+	keyWait
 	end
 }
 script 16 mmbn3 {
@@ -503,6 +539,18 @@ script 20 mmbn3 {
 	"""
 	You don't have
 	a ticket!
+	"""
+	keyWait
+	"""
+	You need one
+	for every stop
+	along the way.
+	"""
+	keyWait
+	"""
+	Check your e-mail,
+	you could use a
+	shortcut instead!
 	"""
 	keyWait
 	end
