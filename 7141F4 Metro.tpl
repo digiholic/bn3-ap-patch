@@ -73,12 +73,14 @@ script 5 mmbn3 {
 	a ticket!
 	"""
 	keyWait
+	clearMsg
 	"""
 	You need one
 	for every stop
 	along the way.
 	"""
 	keyWait
+	clearMsg
 	"""
 	Check your e-mail,
 	you could use a
@@ -229,12 +231,14 @@ script 10 mmbn3 {
 	a ticket!
 	"""
 	keyWait
+	clearMsg
 	"""
 	You need one
 	for every stop
 	along the way.
 	"""
 	keyWait
+	clearMsg
 	"""
 	Check your e-mail,
 	you could use a
@@ -385,12 +389,14 @@ script 15 mmbn3 {
 	a ticket!
 	"""
 	keyWait
+	clearMsg
 	"""
 	You need one
 	for every stop
 	along the way.
 	"""
 	keyWait
+	clearMsg
 	"""
 	Check your e-mail,
 	you could use a
@@ -541,12 +547,14 @@ script 20 mmbn3 {
 	a ticket!
 	"""
 	keyWait
+	clearMsg
 	"""
 	You need one
 	for every stop
 	along the way.
 	"""
 	keyWait
+	clearMsg
 	"""
 	Check your e-mail,
 	you could use a
