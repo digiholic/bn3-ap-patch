@@ -55,8 +55,8 @@ def patch_rom():
         start = int(key, 16)
         size = int(sizes[key], 16)
         end = start + size
+        print("Replacing "+hex(size)+" bytes for bank "+hex(start))
         rom_bytes[start:end] = [0xFF] * size
-
 
     # Then, go through all the provided text banks and store them in the smallest available bank
     for key, bin in bins.items():
@@ -82,7 +82,7 @@ def patch_rom():
             new_address = bytearray([0xFF, 0xFF])
             new_address.extend(size.to_bytes(2, 'little'))
             new_address.extend(offset_byte)
-            rom_bytes[start: start+6] = new_address
+            rom_bytes[start: start+8] = new_address
 
             rom_bytes.extend(bin)
             for offset in refs:
