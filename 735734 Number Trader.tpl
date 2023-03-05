@@ -1768,7 +1768,7 @@ script 228 mmbn3 {
 	"""
 	select
 		default = 1
-		disableB = false
+		disableB = true
 		clear = true
 		targets = [
 			jump = continue,

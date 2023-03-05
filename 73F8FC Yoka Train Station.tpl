@@ -409,7 +409,6 @@ script 150 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
 	end
 }
 script 151 mmbn3 {
@@ -437,7 +436,6 @@ script 151 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
 	end
 }
 script 152 mmbn3 {
@@ -465,7 +463,6 @@ script 152 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
 	end
 }
 script 153 mmbn3 {
@@ -493,8 +490,7 @@ script 153 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 154 mmbn3 {
 	flagSet
@@ -521,8 +517,7 @@ script 154 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 155 mmbn3 {
 	flagSet
@@ -549,8 +544,7 @@ script 155 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 156 mmbn3 {
 	flagSet
@@ -577,8 +571,7 @@ script 156 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 	end
 }
 script 157 mmbn3 {
@@ -606,8 +599,7 @@ script 157 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 158 mmbn3 {
 	flagSet
@@ -634,8 +626,7 @@ script 158 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 159 mmbn3 {
 	flagSet
@@ -662,8 +653,7 @@ script 159 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 160 mmbn3 {
 	flagSet
@@ -690,8 +680,7 @@ script 160 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 161 mmbn3 {
 	flagSet
@@ -718,8 +707,7 @@ script 161 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 162 mmbn3 {
 	flagSet
@@ -746,8 +734,7 @@ script 162 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 163 mmbn3 {
 	flagSet
@@ -774,8 +761,7 @@ script 163 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 164 mmbn3 {
 	flagSet
@@ -802,8 +788,7 @@ script 164 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 165 mmbn3 {
 	flagSet
@@ -830,8 +815,7 @@ script 165 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 166 mmbn3 {
 	flagSet
@@ -858,8 +842,7 @@ script 166 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 167 mmbn3 {
 	flagSet
@@ -886,8 +869,7 @@ script 167 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 168 mmbn3 {
 	flagSet
@@ -914,8 +896,7 @@ script 168 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 169 mmbn3 {
 	flagSet
@@ -942,8 +923,7 @@ script 169 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 170 mmbn3 {
 	flagSet
@@ -970,8 +950,7 @@ script 170 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 171 mmbn3 {
 	flagSet
@@ -998,8 +977,7 @@ script 171 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 172 mmbn3 {
 	flagSet
@@ -1026,8 +1004,7 @@ script 172 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 173 mmbn3 {
 	flagSet
@@ -1054,8 +1031,7 @@ script 173 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 174 mmbn3 {
 	flagSet
@@ -1082,8 +1058,7 @@ script 174 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 175 mmbn3 {
 	flagSet
@@ -1110,8 +1085,7 @@ script 175 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 176 mmbn3 {
 	flagSet
@@ -1138,8 +1112,7 @@ script 176 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 177 mmbn3 {
 	flagSet
@@ -1166,8 +1139,7 @@ script 177 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 178 mmbn3 {
 	flagSet
@@ -1194,8 +1166,7 @@ script 178 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 179 mmbn3 {
 	flagSet
@@ -1222,8 +1193,7 @@ script 179 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 180 mmbn3 {
 	flagSet
@@ -1250,8 +1220,7 @@ script 180 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 181 mmbn3 {
 	flagSet
@@ -1278,8 +1247,7 @@ script 181 mmbn3 {
 	clearMsg
 	playerFinish
 	playerReset
-	playerUnlock
-	end
+		end
 }
 script 190 mmbn3 {
 	checkFlag
@@ -1422,8 +1390,7 @@ script 193 mmbn3 {
 	"""
 	playerFinish
 	playerReset
-	playerUnlock
-	keyWait
+		keyWait
 	end
 }
 script 194 mmbn3 {
@@ -1524,26 +1491,20 @@ script 224 mmbn3 {
 		jumpIfFalse = continue
 	msgOpen
 	"""
-	There's a bulletin
-	by the cash register
+	There's a promotion
+	going on.
+	"Clean Up Our Net!"
 	"""
 	keyWait
 	clearMsg
 	"""
-	"New item: Nut-wafer
-	chocolates with
-	prize! 500 Zennys!"
+	"Nut-wafer chocolates
+	w/ prize! Turn in
+	1 BugFrag for one!"
 	"""
 	keyWait
 	clearMsg
-	"""
-	The treats contain
-	sweet chocolate and
-	crispy wafers
-	"""
-	keyWait
-	clearMsg
-	"Buy for 500 Zennys?\n"
+	"Exchange 1 BugFrag?\n"
 	option
 		left = 0
 		right = 0
@@ -1569,8 +1530,8 @@ script 224 mmbn3 {
 			jump = 225,
 			jump = continue
 		]
-	checkTakeZenny
-		amount = 500
+	checkTakeBugFrags
+		amount = 1
 		jumpIfSurplus = continue
 		jumpIfExact = continue
 		jumpIfDeficit = 226
@@ -1584,10 +1545,8 @@ script 224 mmbn3 {
 	chocolate"!!
 	"""
 	playerFinish
-	playerAnimate
-		animation = 4
-	playerUnlock
-	keyWait
+	playerReset
+	keyWait	
 	clearMsg
 	"""
 	Crack!
@@ -1595,32 +1554,6 @@ script 224 mmbn3 {
 	"""
 	keyWait
 	clearMsg
-	mugshotShow
-		mugshot = Lan
-	"This "
-	wait
-		frames = 30
-	"is "
-	wait
-		frames = 30
-	"the "
-	wait
-		frames = 30
-	"""
-	best!
-	The crispy wafers go
-	perfectly with the
-	"""
-	keyWait
-	clearMsg
-	"""
-	sweet chocolate!
-	Now let's see
-	what we get!
-	"""
-	keyWait
-	clearMsg
-	mugshotHide
 	checkFlag
 		flag = 3200
 		jumpIfTrue = continue
@@ -1763,7 +1696,7 @@ script 226 mmbn3 {
 	msgOpen
 	"""
 	I don't have enough
-	Zennys⋯
+	BugFrags⋯
 	"""
 	keyWait
 	end
@@ -2122,12 +2055,12 @@ script 243 mmbn3 {
 	keyWait
 	end
 }
-script 243 mmbn3 {
+script 244 mmbn3 {
 	msgOpen
 	"""
-	Sold out.
-	Thanks for
-	shopping!
+	Sold out. Thanks
+	for keeping our
+	net clean!
 	"""
 	keyWait
 	end
